@@ -136,3 +136,125 @@ desint:FeedbackManager_ProvideFeedback a rdf:Property ;
     rdfs:comment "pour gérer les retours d'information utilisateur tels que les vibrations, les sons, etc." ;
     rdfs:domain desint:FeedbackManager ;
     vs:term_status "experimental" .
+
+
+desint:Form a rdfs:Class ;
+    rdfs:label "Formulaire interactif" ;
+    rdfs:comment "Représente un formulaire interactif pour la saisie de données. Inclut des méthodes pour valider les données entrées, soumettre le formulaire, etc." ;
+    rdfs:subClassOf desint:InteractiveElement ;
+    vs:term_status "experimental" .
+
+desint:Slider a rdfs:Class ;
+    rdfs:label "Curseur interactif" ;
+    rdfs:comment "Pour les curseurs interactifs permettant de sélectionner une valeur dans une plage donnée. Définit des propriétés telles que la valeur minimale, maximale et actuelle du curseur." ;
+    rdfs:subClassOf desint:InteractiveElement ;
+    vs:term_status "experimental" .
+
+desint:Tooltip a rdfs:Class ;
+    rdfs:label "Infobulle" ;
+    rdfs:comment "Pour les infobulles interactives affichant des informations contextuelles lors du survol d'un élément. Inclut des propriétés pour le contenu de l'infobulle et son positionnement." ;
+    rdfs:subClassOf desint:InteractiveElement ;
+    vs:term_status "experimental" .
+
+desint:Modal a rdfs:Class ;
+    rdfs:label "Fenêtre modale" ;
+    rdfs:comment "Représente une fenêtre modale interactive affichant du contenu supplémentaire ou des actions contextuelles. Définit des propriétés pour le titre, le contenu et les actions disponibles." ;
+    rdfs:subClassOf desint:InteractiveElement ;
+    vs:term_status "experimental" .
+
+desint:Dropdown a rdfs:Class ;
+    rdfs:label "Menu déroulant" ;
+    rdfs:comment "Pour les menus déroulants interactifs permettant de sélectionner une option parmi plusieurs. Inclut des propriétés pour les options disponibles et la sélection actuelle." ;
+    rdfs:subClassOf desint:InteractiveElement ;
+    vs:term_status "experimental" .
+
+desint:Checkbox a rdfs:Class ;
+    rdfs:label "Case à cocher" ;
+    rdfs:comment "Représente une case à cocher interactive pour les choix multiples. Définit des propriétés pour l'état de la case (cochée ou non) et son libellé." ;
+    rdfs:subClassOf desint:InteractiveElement ;
+    vs:term_status "experimental" .
+
+desint:Radio a rdfs:Class ;
+    rdfs:label "Bouton radio" ;
+    rdfs:comment "Pour les boutons radio interactifs permettant de sélectionner une seule option parmi plusieurs. Inclut des propriétés pour les options disponibles et la sélection actuelle." ;
+    rdfs:subClassOf desint:InteractiveElement ;
+    vs:term_status "experimental" .
+
+desint:Toggle a rdfs:Class ;
+    rdfs:label "Interrupteur" ;
+    rdfs:comment "Représente un interrupteur interactif permettant d'activer ou de désactiver une fonctionnalité. Définit des propriétés pour l'état de l'interrupteur (activé ou désactivé) et son libellé." ;
+    rdfs:subClassOf desint:InteractiveElement ;
+    vs:term_status "experimental" .
+
+desint:Carousel a rdfs:Class ;
+    rdfs:label "Carrousel" ;
+    rdfs:comment "Pour les carrousels interactifs permettant de faire défiler du contenu horizontalement ou verticalement. Inclut des propriétés pour les éléments du carrousel et les options de navigation." ;
+    rdfs:subClassOf desint:InteractiveElement ;
+    vs:term_status "experimental" .
+
+desint:VideoPlayer a rdfs:Class ;
+    rdfs:label "Lecteur vidéo" ;
+    rdfs:comment "Représente un lecteur vidéo interactif pour la lecture de contenu multimédia. Définit des propriétés pour l'URL de la vidéo, les contrôles de lecture, etc." ;
+    rdfs:subClassOf desint:InteractiveElement ;
+    vs:term_status "experimental" .
+
+# Nouvelles propriétés
+desint:Form_ValidateData a rdf:Property ;
+    rdfs:label "Valider les données" ;
+    rdfs:comment "Méthode pour valider les données saisies dans un formulaire interactif." ;
+    rdfs:domain desint:Form ;
+    vs:term_status "experimental" .
+
+desint:Slider_SetValue a rdf:Property ;
+    rdfs:label "Définir la valeur" ;
+    rdfs:comment "Pour définir la valeur actuelle d'un curseur interactif." ;
+    rdfs:domain desint:Slider ;
+    vs:term_status "experimental" .
+
+desint:Tooltip_DisplayContent a rdf:Property ;
+    rdfs:label "Afficher le contenu" ;
+    rdfs:comment "Méthode pour afficher le contenu d'une infobulle interactive." ;
+    rdfs:domain desint:Tooltip ;
+    vs:term_status "experimental" .
+
+desint:Modal_OpenModal a rdf:Property ;
+    rdfs:label "Ouvrir la fenêtre modale" ;
+    rdfs:comment "Méthode pour ouvrir une fenêtre modale interactive." ;
+    rdfs:domain desint:Modal ;
+    vs:term_status "experimental" .
+
+desint:Dropdown_SelectOption a rdf:Property ;
+    rdfs:label "Sélectionner une option" ;
+    rdfs:comment "Méthode pour sélectionner une option dans un menu déroulant interactif." ;
+    rdfs:domain desint:Dropdown ;
+    vs:term_status "experimental" .
+
+desint:Checkbox_SetState a rdf:Property ;
+    rdfs:label "Définir l'état" ;
+    rdfs:comment "Pour définir l'état (coché ou non) d'une case à cocher interactive." ;
+    rdfs:domain desint:Checkbox ;
+    vs:term_status "experimental" .
+
+desint:Radio_SelectOption a rdf:Property ;
+    rdfs:label "Sélectionner une option" ;
+    rdfs:comment "Méthode pour sélectionner une option dans un groupe de boutons radio interactifs." ;
+    rdfs:domain desint:Radio ;
+    vs:term_status "experimental" .
+
+desint:Toggle_SetState a rdf:Property ;
+    rdfs:label "Définir l'état" ;
+    rdfs:comment "Pour définir l'état (activé ou désactivé) d'un interrupteur interactif." ;
+    rdfs:domain desint:Toggle ;
+    vs:term_status "experimental" .
+
+desint:Carousel_NextSlide a rdf:Property ;
+    rdfs:label "Diapositive suivante" ;
+    rdfs:comment "Méthode pour passer à la diapositive suivante dans un carrousel interactif." ;
+    rdfs:domain desint:Carousel ;
+    vs:term_status "experimental" .
+
+desint:VideoPlayer_Play a rdf:Property ;
+    rdfs:label "Lire la vidéo" ;
+    rdfs:comment "Méthode pour démarrer la lecture d'une vidéo dans un lecteur vidéo interactif." ;
+    rdfs:domain desint:VideoPlayer ;
+    vs:term_status "experimental" .
