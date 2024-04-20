@@ -4,257 +4,257 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix o: <http://omeka.org/s/vocabs/o#> .
-@prefix desint: <https://jardindesconnaissances.univ-paris8.fr/onto/desint#> .
+@prefix designinteracttif: <https://jardindesconnaissances.univ-paris8.fr/onto/c#> .
 @prefix teach: <http://linkedscience.org/teach/ns#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix schema: <http://schema.org/>.
 
-<https://jardindesconnaissances.univ-paris8.fr/onto/desint> a owl:Ontology ;
+<https://jardindesconnaissances.univ-paris8.fr/onto/designinteracttif> a owl:Ontology ;
     dcterms:title "Design interactif" .
 
-desint:InteractiveElement a rdfs:Class ;
+designinteracttif:InteractiveElement a rdfs:Class ;
     rdfs:label "Element interactif" ;
     rdfs:comment "Représente un élément interactif générique. Inclut des méthodes pour gérer les interactions utilisateur telles que les clics, les survols, etc." ;
     rdfs:subClassOf o:Resource ;
     vs:term_status "experimental" .
 
 
-desint:Button a rdfs:Class ;
+designinteracttif:Button a rdfs:Class ;
     rdfs:label "Bouton" ;
     rdfs:comment "Pour les boutons interactifs. Définit des propriétés comme le texte du bouton, les actions associées (comme la navigation vers une autre page), etc." ;
-    rdfs:subClassOf desint:InteractiveElement ;
+    rdfs:subClassOf designinteracttif:InteractiveElement ;
     vs:term_status "experimental" .
 
-desint:InputField a rdfs:Class ;
+designinteracttif:InputField a rdfs:Class ;
     rdfs:label "Champ de saisie" ;
     rdfs:comment "Pour les champs de saisie. Inclut des méthodes pour valider les entrées, gérer les événements de saisie, etc." ;
-    rdfs:subClassOf desint:InteractiveElement ;
+    rdfs:subClassOf designinteracttif:InteractiveElement ;
     vs:term_status "experimental" .
 
-desint:NavigationMenu a rdfs:Class ;
+designinteracttif:NavigationMenu a rdfs:Class ;
     rdfs:label "Menu de navigation" ;
     rdfs:comment "Pour les menus de navigation. Définit des méthodes pour afficher les options de menu, gérer les sélections, etc." ;
-    rdfs:subClassOf desint:InteractiveElement ;
+    rdfs:subClassOf designinteracttif:InteractiveElement ;
     vs:term_status "experimental" .
-desint:3DObject a rdfs:Class ;
+designinteracttif:3DObject a rdfs:Class ;
     rdfs:label "Objet 3D" ;
     rdfs:comment "Pour les objets en réalité virtuelle et augmentée. Inclut des propriétés pour la position, l’orientation, la taille, etc." ;
     rdfs:subClassOf o:Resource ;
     vs:term_status "experimental" .
 
-desint:GestureRecognizer a rdfs:Class ;
+designinteracttif:GestureRecognizer a rdfs:Class ;
     rdfs:label "Reconnaissance de gestes" ;
     rdfs:comment "Pour la reconnaissance de gestes en RA et RV. Définit des méthodes pour détecter des gestes tels que les pincements, les balayages, etc." ;
     rdfs:subClassOf o:Resource ;
     vs:term_status "experimental" .
 
-desint:UserInterface a rdfs:Class ;
+designinteracttif:UserInterface a rdfs:Class ;
     rdfs:label "Interface utilisateur" ;
     rdfs:comment "Pour représenter l’ensemble de l’interface utilisateur d’une application ou d’un site. Inclut des méthodes pour afficher les éléments interactifs, gérer les événements, etc." ;
     rdfs:subClassOf o:Resource ;
     vs:term_status "experimental" .
 
-desint:SemanticModel a rdfs:Class ;
+designinteracttif:SemanticModel a rdfs:Class ;
     rdfs:label "Modèle sémantique" ;
     rdfs:comment "Pour la modélisation sémantique des concepts du design interactif. Contient des propriétés ou des méthodes pour représenter des relations entre les éléments, des métadonnées, etc." ;
     rdfs:subClassOf o:Resource ;
     vs:term_status "experimental" .
 
-desint:AnimationController a rdfs:Class ;
+designinteracttif:AnimationController a rdfs:Class ;
     rdfs:label "Contrôleur d'animation" ;
     rdfs:comment "Pour gérer les animations interactives. Inclut des méthodes pour démarrer, arrêter, mettre en pause, etc., des animations." ;
     rdfs:subClassOf o:Resource ;
     vs:term_status "experimental" .
 
-desint:FeedbackManager a rdfs:Class ;
+designinteracttif:FeedbackManager a rdfs:Class ;
     rdfs:label "Gestionnaire de feedback" ;
     rdfs:comment "Pour gérer les retours d’information utilisateur, tels que les vibrations, les sons, etc." ;
     rdfs:subClassOf o:Resource ;
     vs:term_status "experimental" .
 
-desint:InteractiveElement a rdf:Property ;
+designinteracttif:InteractiveElement a rdf:Property ;
     rdfs:label "handle_interaction" ;
     rdfs:comment "Une méthode  pour gérer les interactions avec l'élément interactif." ;
-    rdfs:domain desint:InteractiveElement ;
+    rdfs:domain designinteracttif:InteractiveElement ;
     vs:term_status "experimental" .
 
-desint:Button_Text a rdf:Property ;
+designinteracttif:Button_Text a rdf:Property ;
     rdfs:label "texte_du_bouton" ;
     rdfs:comment "Une propriété pour stocker le texte du bouton." ;
-    rdfs:domain desint:Button ;
+    rdfs:domain designinteracttif:Button ;
     vs:term_status "experimental" .
 
-desint:Button_HandleInteraction a rdf:Property ;
+designinteracttif:Button_HandleInteraction a rdf:Property ;
     rdfs:label "handle_interaction" ;
     rdfs:comment "Une méthode pour gérer les actions lorsqu'un bouton est cliqué." ;
-    rdfs:domain desint:Button ;
+    rdfs:domain designinteracttif:Button ;
     vs:term_status "experimental" .
 
-desint:InputField_ValidateInput a rdf:Property ;
+designinteracttif:InputField_ValidateInput a rdf:Property ;
     rdfs:label "valider_saisie" ;
     rdfs:comment "validation des entrées utilisateur dans le champ de saisie." ;
-    rdfs:domain desint:InputField ;
+    rdfs:domain designinteracttif:InputField ;
     vs:term_status "experimental" .
 
-desint:NavigationMenu_DisplayOptions a rdf:Property ;
+designinteracttif:NavigationMenu_DisplayOptions a rdf:Property ;
     rdfs:label "affichage des options du menu de navigation." ;
-    rdfs:domain desint:NavigationMenu ;
+    rdfs:domain designinteracttif:NavigationMenu ;
     vs:term_status "experimental" .
 
-desint:ThreeDObject_SetPosition a rdf:Property ;
+designinteracttif:ThreeDObject_SetPosition a rdf:Property ;
     rdfs:label "définir_position" ;
     rdfs:comment "pour définir la position d'un objet en réalité virtuelle et augmentée." ;
-    rdfs:domain desint:ThreeDObject ;
+    rdfs:domain designinteracttif:ThreeDObject ;
     vs:term_status "experimental" .
 
-desint:GestureRecognizer_DetectGesture a rdf:Property ;
+designinteracttif:GestureRecognizer_DetectGesture a rdf:Property ;
     rdfs:label "détecter_geste" ;
     rdfs:comment "pour la détection des gestes en réalité virtuelle et augmentée." ;
-    rdfs:domain desint:GestureRecognizer ;
+    rdfs:domain designinteracttif:GestureRecognizer ;
     vs:term_status "experimental" .
 
-desint:UserInterface_DisplayElements a rdf:Property ;
+designinteracttif:UserInterface_DisplayElements a rdf:Property ;
     rdfs:label "afficher_elements" ;
     rdfs:comment "pour l'affichage les éléments de l'interface utilisateur." ;
-    rdfs:domain desint:UserInterface ;
+    rdfs:domain designinteracttif:UserInterface ;
     vs:term_status "experimental" .
 
-desint:SemanticModel_RepresentConcepts a rdf:Property ;
+designinteracttif:SemanticModel_RepresentConcepts a rdf:Property ;
     rdfs:label "représenter_concepts" ;
     rdfs:comment "pour modéliser sémantiquement les concepts du design interactif." ;
-    rdfs:domain desint:SemanticModel ;
+    rdfs:domain designinteracttif:SemanticModel ;
     vs:term_status "experimental" .
 
-desint:AnimationController_StartAnimation a rdf:Property ;
+designinteracttif:AnimationController_StartAnimation a rdf:Property ;
     rdfs:label "démarrer_animation" ;
     rdfs:comment "pour démarrer une animation interactive." ;
-    rdfs:domain desint:AnimationController ;
+    rdfs:domain designinteracttif:AnimationController ;
     vs:term_status "experimental" .
 
-desint:FeedbackManager_ProvideFeedback a rdf:Property ;
+designinteracttif:FeedbackManager_ProvideFeedback a rdf:Property ;
     rdfs:label "fournir_feedback" ;
     rdfs:comment "pour gérer les retours d'information utilisateur tels que les vibrations, les sons, etc." ;
-    rdfs:domain desint:FeedbackManager ;
+    rdfs:domain designinteracttif:FeedbackManager ;
     vs:term_status "experimental" .
 
 
-desint:Form a rdfs:Class ;
+designinteracttif:Form a rdfs:Class ;
     rdfs:label "Formulaire interactif" ;
     rdfs:comment "Représente un formulaire interactif pour la saisie de données. Inclut des méthodes pour valider les données entrées, soumettre le formulaire, etc." ;
-    rdfs:subClassOf desint:InteractiveElement ;
+    rdfs:subClassOf designinteracttif:InteractiveElement ;
     vs:term_status "experimental" .
 
-desint:Slider a rdfs:Class ;
+designinteracttif:Slider a rdfs:Class ;
     rdfs:label "Curseur interactif" ;
     rdfs:comment "Pour les curseurs interactifs permettant de sélectionner une valeur dans une plage donnée. Définit des propriétés telles que la valeur minimale, maximale et actuelle du curseur." ;
-    rdfs:subClassOf desint:InteractiveElement ;
+    rdfs:subClassOf designinteracttif:InteractiveElement ;
     vs:term_status "experimental" .
 
-desint:Tooltip a rdfs:Class ;
+designinteracttif:Tooltip a rdfs:Class ;
     rdfs:label "Infobulle" ;
     rdfs:comment "Pour les infobulles interactives affichant des informations contextuelles lors du survol d'un élément. Inclut des propriétés pour le contenu de l'infobulle et son positionnement." ;
-    rdfs:subClassOf desint:InteractiveElement ;
+    rdfs:subClassOf designinteracttif:InteractiveElement ;
     vs:term_status "experimental" .
 
-desint:Modal a rdfs:Class ;
+designinteracttif:Modal a rdfs:Class ;
     rdfs:label "Fenêtre modale" ;
     rdfs:comment "Représente une fenêtre modale interactive affichant du contenu supplémentaire ou des actions contextuelles. Définit des propriétés pour le titre, le contenu et les actions disponibles." ;
-    rdfs:subClassOf desint:InteractiveElement ;
+    rdfs:subClassOf designinteracttif:InteractiveElement ;
     vs:term_status "experimental" .
 
-desint:Dropdown a rdfs:Class ;
+designinteracttif:Dropdown a rdfs:Class ;
     rdfs:label "Menu déroulant" ;
     rdfs:comment "Pour les menus déroulants interactifs permettant de sélectionner une option parmi plusieurs. Inclut des propriétés pour les options disponibles et la sélection actuelle." ;
-    rdfs:subClassOf desint:InteractiveElement ;
+    rdfs:subClassOf designinteracttif:InteractiveElement ;
     vs:term_status "experimental" .
 
-desint:Checkbox a rdfs:Class ;
+designinteracttif:Checkbox a rdfs:Class ;
     rdfs:label "Case à cocher" ;
     rdfs:comment "Représente une case à cocher interactive pour les choix multiples. Définit des propriétés pour l'état de la case (cochée ou non) et son libellé." ;
-    rdfs:subClassOf desint:InteractiveElement ;
+    rdfs:subClassOf designinteracttif:InteractiveElement ;
     vs:term_status "experimental" .
 
-desint:Radio a rdfs:Class ;
+designinteracttif:Radio a rdfs:Class ;
     rdfs:label "Bouton radio" ;
     rdfs:comment "Pour les boutons radio interactifs permettant de sélectionner une seule option parmi plusieurs. Inclut des propriétés pour les options disponibles et la sélection actuelle." ;
-    rdfs:subClassOf desint:InteractiveElement ;
+    rdfs:subClassOf designinteracttif:InteractiveElement ;
     vs:term_status "experimental" .
 
-desint:Toggle a rdfs:Class ;
+designinteracttif:Toggle a rdfs:Class ;
     rdfs:label "Interrupteur" ;
     rdfs:comment "Représente un interrupteur interactif permettant d'activer ou de désactiver une fonctionnalité. Définit des propriétés pour l'état de l'interrupteur (activé ou désactivé) et son libellé." ;
-    rdfs:subClassOf desint:InteractiveElement ;
+    rdfs:subClassOf designinteracttif:InteractiveElement ;
     vs:term_status "experimental" .
 
-desint:Carousel a rdfs:Class ;
+designinteracttif:Carousel a rdfs:Class ;
     rdfs:label "Carrousel" ;
     rdfs:comment "Pour les carrousels interactifs permettant de faire défiler du contenu horizontalement ou verticalement. Inclut des propriétés pour les éléments du carrousel et les options de navigation." ;
-    rdfs:subClassOf desint:InteractiveElement ;
+    rdfs:subClassOf designinteracttif:InteractiveElement ;
     vs:term_status "experimental" .
 
-desint:VideoPlayer a rdfs:Class ;
+designinteracttif:VideoPlayer a rdfs:Class ;
     rdfs:label "Lecteur vidéo" ;
     rdfs:comment "Représente un lecteur vidéo interactif pour la lecture de contenu multimédia. Définit des propriétés pour l'URL de la vidéo, les contrôles de lecture, etc." ;
-    rdfs:subClassOf desint:InteractiveElement ;
+    rdfs:subClassOf designinteracttif:InteractiveElement ;
     vs:term_status "experimental" .
 
 # Nouvelles propriétés
-desint:Form_ValidateData a rdf:Property ;
+designinteracttif:Form_ValidateData a rdf:Property ;
     rdfs:label "Valider les données" ;
     rdfs:comment "Méthode pour valider les données saisies dans un formulaire interactif." ;
-    rdfs:domain desint:Form ;
+    rdfs:domain designinteracttif:Form ;
     vs:term_status "experimental" .
 
-desint:Slider_SetValue a rdf:Property ;
+designinteracttif:Slider_SetValue a rdf:Property ;
     rdfs:label "Définir la valeur" ;
     rdfs:comment "Pour définir la valeur actuelle d'un curseur interactif." ;
-    rdfs:domain desint:Slider ;
+    rdfs:domain designinteracttif:Slider ;
     vs:term_status "experimental" .
 
-desint:Tooltip_DisplayContent a rdf:Property ;
+designinteracttif:Tooltip_DisplayContent a rdf:Property ;
     rdfs:label "Afficher le contenu" ;
     rdfs:comment "Méthode pour afficher le contenu d'une infobulle interactive." ;
-    rdfs:domain desint:Tooltip ;
+    rdfs:domain designinteracttif:Tooltip ;
     vs:term_status "experimental" .
 
-desint:Modal_OpenModal a rdf:Property ;
+designinteracttif:Modal_OpenModal a rdf:Property ;
     rdfs:label "Ouvrir la fenêtre modale" ;
     rdfs:comment "Méthode pour ouvrir une fenêtre modale interactive." ;
-    rdfs:domain desint:Modal ;
+    rdfs:domain designinteracttif:Modal ;
     vs:term_status "experimental" .
 
-desint:Dropdown_SelectOption a rdf:Property ;
+designinteracttif:Dropdown_SelectOption a rdf:Property ;
     rdfs:label "Sélectionner une option" ;
     rdfs:comment "Méthode pour sélectionner une option dans un menu déroulant interactif." ;
-    rdfs:domain desint:Dropdown ;
+    rdfs:domain designinteracttif:Dropdown ;
     vs:term_status "experimental" .
 
-desint:Checkbox_SetState a rdf:Property ;
+designinteracttif:Checkbox_SetState a rdf:Property ;
     rdfs:label "Définir l'état" ;
     rdfs:comment "Pour définir l'état (coché ou non) d'une case à cocher interactive." ;
-    rdfs:domain desint:Checkbox ;
+    rdfs:domain designinteracttif:Checkbox ;
     vs:term_status "experimental" .
 
-desint:Radio_SelectOption a rdf:Property ;
+designinteracttif:Radio_SelectOption a rdf:Property ;
     rdfs:label "Sélectionner une option" ;
     rdfs:comment "Méthode pour sélectionner une option dans un groupe de boutons radio interactifs." ;
-    rdfs:domain desint:Radio ;
+    rdfs:domain designinteracttif:Radio ;
     vs:term_status "experimental" .
 
-desint:Toggle_SetState a rdf:Property ;
+designinteracttif:Toggle_SetState a rdf:Property ;
     rdfs:label "Définir l'état" ;
     rdfs:comment "Pour définir l'état (activé ou désactivé) d'un interrupteur interactif." ;
-    rdfs:domain desint:Toggle ;
+    rdfs:domain designinteracttif:Toggle ;
     vs:term_status "experimental" .
 
-desint:Carousel_NextSlide a rdf:Property ;
+designinteracttif:Carousel_NextSlide a rdf:Property ;
     rdfs:label "Diapositive suivante" ;
     rdfs:comment "Méthode pour passer à la diapositive suivante dans un carrousel interactif." ;
-    rdfs:domain desint:Carousel ;
+    rdfs:domain designinteracttif:Carousel ;
     vs:term_status "experimental" .
 
-desint:VideoPlayer_Play a rdf:Property ;
+designinteracttif:VideoPlayer_Play a rdf:Property ;
     rdfs:label "Lire la vidéo" ;
     rdfs:comment "Méthode pour démarrer la lecture d'une vidéo dans un lecteur vidéo interactif." ;
-    rdfs:domain desint:VideoPlayer ;
+    rdfs:domain designinteracttif:VideoPlayer ;
     vs:term_status "experimental" .
